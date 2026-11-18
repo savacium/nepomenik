@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="sr-Latn">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>nepomenik</title>
+  <link rel="stylesheet" href="popup.css">
+  <script defer src="settings.js"></script>
+  <script defer src="popup.js"></script>
+</head>
+<body>
+  <header>
+    <img src="icons/48.png" alt="" width="38" height="38">
+    <div><h1>nepomenik</h1><p>@ParlamentSrbija</p></div>
+    <span id="status" role="status" class="status">Učitavanje</span>
+  </header>
+  <main>
+    <fieldset id="settings" disabled>
+      <legend class="sr-only">Podešavanja</legend>
+      <label class="master">
+        <span>Zamagljivanje<small>Alt + Shift + V</small></span>
+        <input id="enabled" type="checkbox" role="switch">
+      </label>
+      <div class="panel" id="filters">
+        <div class="strength">
+          <label for="strength">Jačina zamućenja</label>
+          <output id="value" for="strength"></output>
+          <input id="strength" type="range" min="12" max="48" step="1">
+        </div>
+      </div>
+    </fieldset>
+    <p id="tab-status" aria-live="polite"></p>
+  </main>
+  <footer><span class="dot"></span> Obrada na uređaju <span class="version">v0.2.1</span></footer>
+</body>
+</html>
